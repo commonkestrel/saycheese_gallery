@@ -1,7 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    base64 (0.2.0)
     connection_pool (2.5.1)
+    down (5.4.2)
+      addressable (~> 2.8)
     faraday (2.13.0)
       faraday-net_http (>= 2.0, < 3.5)
       json
@@ -11,6 +16,9 @@ GEM
     faraday-net_http_persistent (2.3.0)
       faraday (~> 2.5)
       net-http-persistent (>= 4.0.4, < 5)
+    ffi (1.17.2)
+    ffi (1.17.2-x86_64-linux-gnu)
+    fileutils (1.7.3)
     json (2.10.2)
     logger (1.7.0)
     net-http (0.6.0)
@@ -21,14 +29,22 @@ GEM
       faraday (>= 1.0, < 3.0)
       faraday-net_http_persistent
       net-http-persistent
+    public_suffix (6.0.1)
     uri (1.0.3)
+    zbar (0.3.0)
+      ffi (~> 1.0)
 
 PLATFORMS
   ruby
   x86_64-linux
 
 DEPENDENCIES
+  base64 (~> 0.2.0)
+  down (~> 5.4)
+  fileutils (~> 1.7)
+  json (~> 2.10)
   norairrecord (~> 0.3.0)
+  zbar (~> 0.3.0)
 
 BUNDLED WITH
    2.5.22
